@@ -11,8 +11,7 @@ function Header( ) {
       <header className='d-flex justify-content-between p-3 align-items-center bg-header'>
                 <h1 className='h4'>PhoneWave Shop</h1>
                <div className='openModal'>
-               <span  className='fs-5' data-bs-toggle="modal" data-bs-target="#exampleModal">Carrinho</span>
-               <img src={cart} alt="Carrinho" height={34}  data-bs-toggle="modal" data-bs-target="#exampleModal"/>
+               <img src={cart} alt="Carrinho" height={28}  data-bs-toggle="modal" data-bs-target="#exampleModal"/>
                </div>
             </header>
       </div>

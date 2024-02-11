@@ -10,16 +10,18 @@ const Modal = ({ cart, handleRemoveToCart,total }) => {
         <div className="container">
           <div className="d-flex justify-content-between">
             <h2>Shopping Cart </h2>
-            <h3>Sub Total: {total} R$</h3>
+            <h3>Sub Total:  {new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(total)} </h3>
           </div>
           {cart.map((item) => (
             <div key={item.product.id} className="d-flex mt-3">
               <img src={item.product.image} alt='produto' width={150}/>
               <div className="d-flex flex-column ms-5 w-50 mt-5">
                 <span>Produto: {item.product.productName} </span>
-                <span>Valor: {item.product.price} R$</span>
+                <span>Valor:  {new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(item.product.price)} </span>
                 <span>Quantidade: {item.quantity}</span>
-                <span>Total: {item.quantity * item.product.price} R$</span>
+                <span>Total:   {new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' })
+                .format(item.quantity * item.product.price)} 
+                </span>
                 <button type="button" className="btn btn-danger mt-2" onClick={() => handleRemoveToCart(item.product.id)}>Remover</button>
               </div>
             </div>
