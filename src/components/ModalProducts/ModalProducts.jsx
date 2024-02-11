@@ -32,7 +32,7 @@ const Modal = ({ cart, handleRemoveToCart,total }) => {
         </div>
       </div>
       <div className="modal-footer">
-        <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
         {total !== 0 && (
                    <button type="submit" className="btn btn-success" data-bs-dismiss="modal" onClick={() => window.location.reload()}>Finalizar Compra</button>    
               )}
@@ -40,7 +40,6 @@ const Modal = ({ cart, handleRemoveToCart,total }) => {
     </div>
   </div>
 </div>
-
       </>
     );
   }
