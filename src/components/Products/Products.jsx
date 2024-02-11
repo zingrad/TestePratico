@@ -1,13 +1,12 @@
 import { useState } from 'react';
-import card1 from '../../assets/productsImages/Card.png'
+import Modal from '../ModalProducts/ModalProducts';
 
 
-function Products({ productsList,count }) {
+function Products({ productsList }) {
 
     const [cart, setCart] = useState([])
  
     const handleAddToCart = (id) => {
-
                 const phone = productsList.find( (phone) => phone.id === id)
                 const alreadyInShoppingCart = cart.find(item => item.product.id === id)
                 if(alreadyInShoppingCart){
@@ -15,8 +14,9 @@ function Products({ productsList,count }) {
                         if(item.product.id === id)({
                             ...item, 
                             quantity: item.quantity++
-                            } )
+                            })
                             return item
+                            
                     })
                     setCart(newShoppingCart)
                     return
@@ -30,52 +30,50 @@ function Products({ productsList,count }) {
         
     }
 
-
-    const handleClick = (id) => {
-        handleAddToCart(id); // Adiciona o produto ao carrinho
-        count(()=> { return})
-      }
-
     const handleRemoveToCart = (id) => {
-
-    }
+        const alreadyInShoppingCart = cart.find((item) => item.product.id === id);
     
+        if (alreadyInShoppingCart && alreadyInShoppingCart.quantity > 1) {
+            const newShoppingCart = cart.map((item) =>
+                item.product.id === id ? { ...item, quantity: item.quantity - 1 } : item,
+            );
+            setCart(newShoppingCart);
+        } else {
+            const newShoppingCart = cart.filter((item) => item.product.id !== id);
+            setCart(newShoppingCart);
+        }
+    };
+
+
+
+    const totalCart = cart.reduce((total,current) => {
+        return total + (current.product.price * current.quantity)
+    },0)
 
     return (
 <>
-        <section className='container p-5'>
+        <section className='container p-4 p-sm-5 mt-sm-5 mt-md-0 align-items-center'>
             <h2>Produtos</h2>
             <div className="row">
                 {productsList.map(({id,productName,price,image}) =>(
-                    <div key={id} className="col-md-3">
+                    <div key={id} className="col-lg-3 col-md-6 d-flex justify-content-center mt-3">
                         <div  className="card" style={{ width: "15rem" }}>
-                        <img src={card1} alt="" className="card-img-top" />
+                        <img src={image} alt="" className="card-img-top" />
                         <div className="card-body">
-                            <p className="card-text fs-6 fw-bold">
+                            <p className="card-text fs-6 fw-bold mb-2">
                                {productName}
                             </p>
                             <span>{price} R$</span>
-                            <button type='button' className='w-100 mt-1' onClick={()=> handleClick(id)}>Adicionar ao Carrinho </button>
+                            <button type='button' className='w-100 mt-1 btn btn-primary' onClick={()=> handleAddToCart(id)}>
+                                Adicionar ao Carrinho {cart.find(item => item.product.id === id)?.quantity > 0 && `(${cart.find(item => item.product.id === id)?.quantity})`}
+                            </button>
                         </div>
                     </div>
                       </div>
                 ))}
             </div>
         </section>
-        
-        <h2>Shopping Cart</h2>
-            {cart.map((item) =>(
-                          <div className="d-flex product">
-                          <img src='https://picsum.photos/100/120' alt='produto'/>
-                          <div className="d-flex flex-column ms-5">
-                                <span>Produto: {item.product.productName} </span>
-                                <span>Valor: {item.product.price}</span>
-                                <span>Quantidade: {item.quantity}</span>
-                                <span>Total: {item.quantity * item.product.price}</span>
-                                 <button type="button" onClick={()=> handleRemoveToCart(item.id)}>Remover</button>
-                          </div>
-                        </div>
-                ))}
+                <Modal  cart={cart} handleRemoveToCart={handleRemoveToCart} total={totalCart}/>
         </>
     )
 }

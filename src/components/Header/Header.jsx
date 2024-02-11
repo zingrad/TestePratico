@@ -2,28 +2,17 @@ import cart from '../../assets/cart.svg'
 import './header.css'
 import hero from '../../assets/hero.png'
 
-function Header({productItem}) {
+function Header( ) {
 
     return (
    <>
     <div className='bg-header fixed-top '>
       <div className="container ">
-      <header className='d-flex justify-content-between justify-content-center p-3 align-items-center bg-header'>
+      <header className='d-flex justify-content-between p-3 align-items-center bg-header'>
                 <h1 className='h4'>PhoneWave Shop</h1>
-                <ul className='d-flex align-items-center m-0 p-0'>
-                  <li>
-                    HeadPhones
-                  </li>
-                  <li className='ms-2 me-2'>
-                    In-ear
-                  </li>
-                  <li>
-                    SmartPhones
-                  </li>
-                </ul>
-               <div>
-               <img src={cart} alt="Carrinho" height={24} />
-                {productItem}
+               <div className='openModal'>
+               <span  className='fs-5' data-bs-toggle="modal" data-bs-target="#exampleModal">Carrinho</span>
+               <img src={cart} alt="Carrinho" height={34}  data-bs-toggle="modal" data-bs-target="#exampleModal"/>
                </div>
             </header>
       </div>
@@ -37,6 +26,7 @@ function Header({productItem}) {
           </p>
          </div>
       </div>
+
     </>
     )
   }

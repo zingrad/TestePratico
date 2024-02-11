@@ -4,49 +4,97 @@
         "id": 1,
         "productName": "Sony - WH-1000XM5",
         "price": 150,
-        "image": "https://picsum.photos/100/120"
+        "image": "https://servidor-teste-cyan.vercel.app/Card.png"
       },
       {
         "id": 2,
         "productName": "Beats Studio Pro",
         "price": 600,
-        "image": "https://picsum.photos/100/120"
+        "image": "https://servidor-teste-cyan.vercel.app/Card2.png"
       },
       {
         "id": 3,
         "productName": "Sony - WH-CH720N ",
         "price": 250,
-        "image": "https://picsum.photos/100/120"
+        "image": "https://servidor-teste-cyan.vercel.app/Card3.png"
       },
       {
         "id": 4,
         "productName": "Skullcandy",
         "price": 270,
-        "image": "https://picsum.photos/100/120"
+        "image": "https://servidor-teste-cyan.vercel.app/Card5.png"
       },
       {
         "id": 5,
         "productName": "JBL Reflect Flow Pro+",
         "price": 170,
-        "image": "https://picsum.photos/100/120"
+        "image": "https://servidor-teste-cyan.vercel.app/Card6.png"
       },
       {
         "id": 6,
         "productName": "Bose QuietComfort",
         "price": 300,
-        "image": "https://picsum.photos/100/120"
+        "image": "https://servidor-teste-cyan.vercel.app/Card7.png"
       },
       {
         "id": 7,
         "productName": "AKG Y600NC Wireless",
         "price": 500,
-        "image": "https://picsum.photos/100/120"
+        "image": "https://servidor-teste-cyan.vercel.app/Card5.png"
       },
       {
         "id": 8,
         "productName": "AKG Y700NC Wireless",
         "price": 600,
-        "image": "https://picsum.photos/100/120"
+        "image": "https://servidor-teste-cyan.vercel.app/Card8.png"
+      },
+      {
+        "id": 9,
+        "productName": "Sony - WH-1000XM5",
+        "price": 150,
+        "image": "https://servidor-teste-cyan.vercel.app/Card.png"
+      },
+      {
+        "id": 10,
+        "productName": "Beats Studio Pro",
+        "price": 600,
+        "image": "https://servidor-teste-cyan.vercel.app/Card2.png"
+      },
+      {
+        "id": 11,
+        "productName": "Sony - WH-CH720N ",
+        "price": 250,
+        "image": "https://servidor-teste-cyan.vercel.app/Card3.png"
+      },
+      {
+        "id": 12,
+        "productName": "Skullcandy",
+        "price": 270,
+        "image": "https://servidor-teste-cyan.vercel.app/Card5.png"
+      },
+      {
+        "id": 13,
+        "productName": "JBL Reflect Flow Pro+",
+        "price": 170,
+        "image": "https://servidor-teste-cyan.vercel.app/Card6.png"
+      },
+      {
+        "id": 14,
+        "productName": "Bose QuietComfort",
+        "price": 300,
+        "image": "https://servidor-teste-cyan.vercel.app/Card7.png"
+      },
+      {
+        "id": 15,
+        "productName": "AKG Y600NC Wireless",
+        "price": 500,
+        "image": "https://servidor-teste-cyan.vercel.app/Card5.png"
+      },
+      {
+        "id": 16,
+        "productName": "AKG Y700NC Wireless",
+        "price": 600,
+        "image": "https://servidor-teste-cyan.vercel.app/Card8.png"
       }
   ]
 }
