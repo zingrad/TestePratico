@@ -1,0 +1,52 @@
+{
+  "produtos": [
+    {
+        "id": 1,
+        "productName": "Sony - WH-1000XM5",
+        "price": 150,
+        "image": "https://picsum.photos/100/120"
+      },
+      {
+        "id": 2,
+        "productName": "Beats Studio Pro",
+        "price": 600,
+        "image": "https://picsum.photos/100/120"
+      },
+      {
+        "id": 3,
+        "productName": "Sony - WH-CH720N ",
+        "price": 250,
+        "image": "https://picsum.photos/100/120"
+      },
+      {
+        "id": 4,
+        "productName": "Skullcandy",
+        "price": 270,
+        "image": "https://picsum.photos/100/120"
+      },
+      {
+        "id": 5,
+        "productName": "JBL Reflect Flow Pro+",
+        "price": 170,
+        "image": "https://picsum.photos/100/120"
+      },
+      {
+        "id": 6,
+        "productName": "Bose QuietComfort",
+        "price": 300,
+        "image": "https://picsum.photos/100/120"
+      },
+      {
+        "id": 7,
+        "productName": "AKG Y600NC Wireless",
+        "price": 500,
+        "image": "https://picsum.photos/100/120"
+      },
+      {
+        "id": 8,
+        "productName": "AKG Y700NC Wireless",
+        "price": 600,
+        "image": "https://picsum.photos/100/120"
+      }
+  ]
+}
