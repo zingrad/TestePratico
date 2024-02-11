@@ -9,8 +9,8 @@ const Modal = ({ cart, handleRemoveToCart,total }) => {
       <div className="modal-body">
         <div className="container">
           <div className="d-flex justify-content-between">
-            <h2>Shopping Cart </h2>
-            <h3>Sub Total:  {new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(total)} </h3>
+            <h2>Carrinho de compras</h2>
+            <h3>Subtotal:  {new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(total)} </h3>
           </div>
           {cart.map((item) => (
             <div key={item.product.id} className="d-flex mt-3">

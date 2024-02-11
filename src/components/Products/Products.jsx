@@ -65,7 +65,7 @@ function Products({ productsList }) {
                             </p>
                             <span>{new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(price)} </span>
                             <button type='button' className='w-100 mt-1 btn btn-primary' onClick={()=> handleAddToCart(id)}>
-                                Adicionar ao Carrinho {cart.find(item => item.product.id === id)?.quantity > 0 && `(${cart.find(item => item.product.id === id)?.quantity})`}
+                                Adicionar ao carrinho {cart.find(item => item.product.id === id)?.quantity > 0 && `(${cart.find(item => item.product.id === id)?.quantity})`}
                             </button>
                         </div>
                     </div>

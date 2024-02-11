@@ -16,12 +16,12 @@ function Header( ) {
             </header>
       </div>
       </div>
-      <div className='hero d-sm-none d-md-block fw-bold position-relative mt-5'>
-         <img src={hero} alt="man listening to music" className='w-100'/>
+      <div className='hero d-sm-none d-md-block position-relative mt-5'>
+         <img src={hero} alt="Homem escutando musica" className='w-100'/>
          <div className='image-content'>
-         <h2 className='h1'>Ouça o <span>incrível</span> som da música</h2>
-         <p>
-          experimente músicas como nunca antes
+         <h2 className='h1 fw-bold'>Ouça o <span>incrível</span> som da música</h2>
+         <p className='fs-5 fw-bold'>
+          Experimente músicas como nunca antes
           </p>
          </div>
       </div>
