@@ -11,7 +11,7 @@ function App() {
   const [productsPerPage] = useState(6); 
 
   useEffect(() => {
-    fetch('http://localhost:3000/produtos')
+    fetch('https://api.npoint.io/07a7edbc97ae6d20e886/produtos')
       .then(res => res.json())
       .then(resJson => {
         setProductsList(resJson);
